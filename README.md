@@ -1,3 +1,5 @@
-# [Oddox.org](https://oddox.org)
+# Oddox.org website
 
-> A website for Oddox. Built on [Skeleton CSS](http://getskeleton.com/)
+https://oddox.org
+
+> A website for Oddox. Built on [Osseous CSS](https://austindelamar.com/osseous/)
