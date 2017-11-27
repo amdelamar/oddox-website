@@ -22,52 +22,51 @@
 
     <title>Oddox - Offline-first, Open-Source, Blogging Platform</title>
     <style>
-        html,body{height: 100%;}
+        html,body{height: 81%;}
         :root{--gradient:linear-gradient(0deg, rgba(255, 255, 255, 0) 50%, #ffffff), linear-gradient(70deg, #eaf5ff 32%, #f6fff8);}
     </style>
 </head>
 <body>
 
-<!-- Mobile Sidebar Menu -->
-<nav id="sidebar" class="sidebar border animate-left shadow-right">
-    <div class="container">
-        <a class="padding u-right" title="Close Menu" href="javascript:closeSidebar()">
-            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
-        </a>
-        <br/>
+<!-- Sidebar -->
+<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+  <div class="nav-item-close">
+      <a class="right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+          <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
+      </a>
+  </div>
+    <div class="nav-list text-center" onclick="closeSidebar()">
+        <a class="nav-item" href="#download">Download</a>
+        <a class="nav-item" href="#examples">Examples</a>
+        <a class="nav-item" href="#about">About</a>
     </div>
-    <div class="container nav-list" onclick="closeSidebar()">
-        <a class="nav-item text-regular" href="#download">Download</a>
-        <a class="nav-item text-regular" href="#examples">Examples</a>
-        <a class="nav-item text-regular" href="#about">About</a>
-    </div>
-    <div class="u-full-width text-center">
-        <br><br><small><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></small>
+    <div class="padding-top-large full-width text-center">
+        <p class="text-small"><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></p>
     </div>
 </nav>
 
-<!-- Header fixed up top -->
-<header class="header border-bottom">
-  	<div class="header-body container">
-      <div class="nav-group nav-group margin-left">
-          <a class="nav-item  nav-item-logo" href="#"><span class="text-medium text-uppercase text-wide">Oddox</span></a>
+<!-- Navbar -->
+<nav class="navbar border-bottom">
+    <div class="navbar-body container">
+      <div class="nav-item-logo">
+          <a href="#"><span class="text-medium text-thin text-uppercase text-wide">Oddox</span></a>
       </div>
-      <div class="nav-item nav-item-menu">
-          <a class="text-large" title="Open Menu" href="javascript:openSidebar()">
+      <div class="nav-small-menu">
+          <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
               <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
           </a>
       </div>
-      <div class="nav-group nav-group-menu padding-right-large">
+      <div class="nav-group nav-large-menu">
           <a class="nav-item" href="#download">Download</a>
           <a class="nav-item" href="#examples">Examples</a>
           <a class="nav-item" href="#about">About</a>
       </div>
   	</div>
-</header>
+</nav>
 
 
 <!-- Landing logo, title, and subtitle. -->
-<div class="row padding-top-large margin-top-large border-bottom" style="background-image:var(--gradient);">
+<header class="row padding-top-large margin-top-large border-bottom" style="background-image:var(--gradient);">
     <div class="container text-center">
         <div class="twelve columns">
             <div class="container padding-top-large margin-top-large"></div>
@@ -84,29 +83,25 @@
             </p>
         </div>
     </div>
-</div>
+</header>
 
 <!-- Main Content -->
 <article class="container">
-    <div class="row">
 
-        <div class="twelve columns padding-top-large"></div>
+  <div id="about" class="row section">
+    <h2>Coming Soon</h2>
+    <p>Sorry, but this website is still under construction. Please come back later!</p>
 
-        <div class="twelve columns padding-top-large text-center">
-          <h2>Coming Soon</h2>
-            <p>Sorry, but this website is still under construction. Please come back later!</p>
-        </div>
+    <div class="twelve columns padding-large"></div>
+  </div>
 
-        <div class="twelve columns padding-top-large"></div>
-
-    </div>
 </article>
 
 
 <!-- Footer at bottom -->
-<footer class="row text-center border-top padding-bottom-large" style="height:50%;background-image:var(--gradient);">
-    <p><br/><br/><small><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></small><br><br>
-    <a class="button button-blue" title="Back to top" href="javascript:gotoTop()">Back to Top</a></p>
+<footer class="row section text-center" style="height:50%;background-image:var(--gradient);">
+  <p><small><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></small></p>
+  <a class="button button-blue" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
 </footer>
 
 <!-- Lazy load JavaScript, mainly for navigation -->
