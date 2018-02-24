@@ -1,131 +1,247 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-  <meta charset="utf-8"/>
-  <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <meta name="author" content="Oddox">
-  <meta name="keywords" content="oddox,blog,open,source,offline-first,sync,blogging,platform,application"/>
-  <meta name="description" content="Oddox is an offline-first blog that syncs! Write, save, and publish your posts then sync later when you're connected."/>
-  <meta name="robots" content="all"/>
+	<meta charset="utf-8" />
+	<meta http-equiv="x-ua-compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="author" content="Oddox">
+	<meta name="keywords" content="oddox,blog,open,source,offline,first,sync,couchdb,pouchdb,blogging,platform,application" />
+	<meta name="description" content="Oddox is a blog with an offline-first editor. Write, save, and publish your posts without an internet connection, then sync later when you're connected." />
+	<meta name="robots" content="all" />
 
-  <!-- Facebook Open Graph -->
-  <meta property="og:url" content="https://oddox.org"/>
-  <meta property="og:type" content="product"/>
-  <meta property="og:locale" content="en_US"/>
-  <meta property="og:title" content="Oddox"/>
-  <meta property="og:image" content="/assets/logo-social-media.png"/>
-  <meta property="og:image:type" content="image/png"/>
-  <meta property="og:image:width" content="600"/>
-  <meta property="og:image:height" content="314"/>
-  <meta property="og:description" content="Oddox is an offline-first blog that syncs! Write, save, and publish your posts then sync later when you're connected."/>
-  <meta property="og:site_name" content="Oddox" />
+	<!-- Facebook Open Graph -->
+	<meta property="og:url" content="https://oddox.org" />
+	<meta property="og:type" content="product" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Oddox" />
+	<meta property="og:image" content="/assets/logo-social-media.png" />
+	<meta property="og:image:type" content="image/png" />
+	<meta property="og:image:width" content="600" />
+	<meta property="og:image:height" content="314" />
+	<meta property="og:description" content="Oddox is a blog with an offline-first editor. Write, save, and publish your posts without an internet connection, then sync later when you're connected." />
+	<meta property="og:site_name" content="Oddox" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary"/>
-  <meta name="twitter:site" content="@Oddox"/>
-  <meta name="twitter:creator" content="@amdelamar"/>
-  <meta name="twitter:title" content="Oddox"/>
-  <meta name="twitter:description" content="Oddox is an offline-first blog that syncs! Write, save, and publish your posts then sync later when you're connected."/>
-  <meta name="twitter:image" content="/assets/logo-social-media.png"/>
-  <meta name="twitter:domain" content="oddox.org"/>
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:site" content="@oddoxorg" />
+	<meta name="twitter:creator" content="@amdelamar" />
+	<meta name="twitter:title" content="Oddox" />
+	<meta name="twitter:description" content="Oddox is a blog with an offline-first editor. Write, save, and publish your posts without an internet connection, then sync later when you're connected." />
+	<meta name="twitter:image" content="/assets/logo-social-media.png" />
+	<meta name="twitter:domain" content="oddox.org" />
 
-  <!-- Google+ Schema.org -->
-  <meta itemprop="name" content="Oddox"/>
-  <meta itemprop="description" content="Oddox is an offline-first blog that syncs! Write, save, and publish your posts then sync later when you're connected."/>
-  <meta itemprop="image" content="/assets/logo-social-media.png"/>
+	<!-- Google+ Schema.org -->
+	<meta itemprop="name" content="Oddox" />
+	<meta itemprop="description" content="Oddox is a blog with an offline-first editor. Write, save, and publish your posts without an internet connection, then sync later when you're connected." />
+	<meta itemprop="image" content="/assets/logo-social-media.png" />
 
-  <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
-  <link rel="manifest" href="static/manifest.json">
-  <link rel="mask-icon" href="static/safari-pinned-tab.svg" color="#67d9b8">
-  <meta name="msapplication-config" content="static/browserconfig.xml">
-  <meta name="theme-color" content="#67d9b8">
+	<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+	<link rel="manifest" href="static/manifest.json">
+	<link rel="mask-icon" href="static/safari-pinned-tab.svg" color="#67d9b8">
+	<meta name="msapplication-config" content="static/browserconfig.xml">
+	<meta name="theme-color" content="#67d9b8">
 
-  <link rel="shortcut icon" href="favicon.ico"/>
-  <link rel="stylesheet" href="https://austindelamar.com/osseous/1.2.0/osseous.min.css"/>
-  <link rel="stylesheet" href="vendor/icomoon/icomoon.css?v=2">
-  <title>Oddox - Offline-first Blog that Syncs!</title>
+	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="stylesheet" href="https://austindelamar.com/osseous/1.2.0/osseous.min.css" />
+	<link rel="stylesheet" href="vendor/icomoon/icomoon.css?v=2">
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<title>Oddox - Open source blog with an offline-first editor</title>
 </head>
+
 <body>
 
-<!-- Sidebar -->
-<nav id="sidebarMenu" class="sidebar border-right shadow-right">
-  <div class="nav-item-close">
-      <a class="right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
+	<nav id="sidebarMenu" class="sidebar border-right shadow-right">
+		<div class="nav-item-close">
+			<a class="right" title="Close Menu" href="javascript:closeSidebar()" aria-label="Close">
           <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2.757 14.657L8 9.414l5.243 5.243 1.414-1.414L9.414 8l5.243-5.243-1.414-1.414L8 6.586 2.757 1.343 1.343 2.757 6.586 8l-5.243 5.243z" fill-rule="evenodd"></path></svg>
       </a>
-  </div>
-    <div class="nav-list text-center" onclick="closeSidebar()">
-        <a class="nav-item" href="#download">Download</a>
-        <a class="nav-item" href="#examples">Examples</a>
-        <a class="nav-item" href="#about">About</a>
-    </div>
-    <div class="padding-top-large full-width text-center">
-        <p class="text-small"><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></p>
-    </div>
-</nav>
+		</div>
+		<div class="nav-list text-center" onclick="closeSidebar()">
+			<a class="nav-item" href="#download">Download</a>
+			<a class="nav-item" href="#examples">Samples</a>
+			<a class="nav-item" href="https://github.com/oddoxorg/">GitHub</a>
+		</div>
+		<div class="padding-top-large full-width text-center">
+      <p>
+  			<a target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-theme text-large"></span></a>&nbsp;&nbsp;
+  			<a target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-theme text-large"></span></a>&nbsp;&nbsp;
+  			<a target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-theme text-large"></span></a>
+      </p>
+			<p class="text-small"><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></p>
+		</div>
+	</nav>
 
-<!-- Navbar -->
-<nav class="navbar border-bottom">
-    <div class="navbar-body container">
-      <div class="nav-item-logo">
-          <a href="#"><img src="assets/logo-dark.png" style="opacity:.6;padding:.5rem" alt="Oddox" /></a>
-      </div>
-      <div class="nav-small-menu">
-          <a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
-              <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+	<nav class="navbar background-solid-theme">
+
+		<div class="navbar-body container">
+			<div class="nav-item-logo">
+				<a href="#">
+            <img src="assets/icon-transparent-512.png" alt="Logo" class="margin-left margin-right" alt="Oddox" />
+            <span class="text-medium text-wide text-white">oddox</span>
           </a>
-      </div>
-      <div class="nav-group nav-large-menu">
-          <a class="nav-item" href="#download">Download</a>
-          <a class="nav-item" href="#examples">Examples</a>
-          <a class="nav-item" href="#about">About</a>
-      </div>
-  	</div>
-</nav>
+			</div>
+			<div class="nav-small-menu">
+				<a class="nav-item" title="Open Menu" href="javascript:openSidebar()">
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 7h16v2H0V7zm0-6h16v2H0V1zm0 12h16v2H0v-2z" fill-rule="evenodd"></path></svg>
+        </a>
+			</div>
+			<div class="nav-group nav-large-menu text-bold">
+				<a class="nav-item text-white" href="#download">Download</a>
+				<a class="nav-item text-white" href="#examples">Examples</a>
+				<a class="nav-item text-white" href="https://github.com/oddoxorg/">GitHub</a>
+			</div>
+		</div>
+	</nav>
+
+	<header class="row padding-top background-solid-theme text-white" style="background: linear-gradient(180deg,#67d9b8 0%,#4da088 100%);">
+		<div class="container text-center">
+			<div class="twelve columns padding-top-large">
+				<img src="assets/logo-transparent.png" style="max-width:40rem;" class="padding--top-large padding-left-large padding-right-large full-width" />
+			</div>
+			<div class="twelve columns padding-bottom-large">
+				<h3 class="padding">open source blog with offline-first writer</h3>
+				<p></p>
+				<a href="#download" class="button button-white">Download</a>&nbsp;
+				<a href="#examples" class="button button-white button-white-outline">View Samples</a>
+			</div>
+		</div>
+	</header>
 
 
-<!-- Landing logo, title, and subtitle. -->
-<header class="row padding-top-large margin-top-large border-bottom" style="background-image:linear-gradient(0deg, #def4ee 70%, #ffffff);">
-    <div class="container text-center">
-        <div class="twelve columns">
-            <img src="assets/icon-transparent-512.png" style="max-width:20rem;" class="full-width" />
+	<div id="ads" class="row section">
+		<div class="container">
+
+			<div class="row">
+				<div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>Focus on writing</h4>
+					<p>Write, save, and publish your posts without an internet connection, then sync later when you're connected.</p>
+				</div>
+				<div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>Organize your posts</h4>
+					<p>Create tags, categories, featured favorites, draft wild ideas, and even recover scrapped ones later from the bin.</p>
+				</div>
+				<div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>Collaborate with others</h4>
+					<p>Invite co-authors to your post or editors to proof-read it before its published.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="download" class="section text-center background-solid-black text-grey">
+		<div class="container">
+			<h2>Try it out, its free</h2>
+			<p>Oddox is a new way to write, distraction free.</p>
+			<a href="/download" class="button button-white button-white-outline">Download</a>
+		</div>
+	</div>
+
+	<div id="samples" class="row section">
+		<div class="container">
+			<h2>Samples</h2>
+
+			<p>View blog designs and templates designed by our team.</p>
+
+			<div class="row padding-top padding-bottom">
+				<div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>Sample A</h4>
+					<p>Minimalistic theme.</p>
+				</div>
+				<div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>Sample B</h4>
+					<p>Fully featured theme.</p>
+				</div>
+				<div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>Sample C</h4>
+					<p>Plain-text only theme.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="samples" class="row section text-center background-solid-lightgrey">
+		<div class="container">
+      <h2>Coming Soon</h2>
+			<p>We're sorry, but this project is still under development. You can view the progress on GitHub,
+        and we'll have a subscription up soon so you can be notified as soon as Oddox is ready!<br/>
+        <br/>
+        Please come back again later!</p>
+        <p class="text-bold">Thank you!</p>
+		</div>
+	</div>
+
+  <div id="features" class="section text-center background-solid-black text-grey">
+		<div class="container">
+			<h2>Lots of great features</h2>
+			<p>Here is a big list of things Oddox can do.</p>
+
+      <div class="row padding-top padding-bottom">
+				<div class="four columns offset-by-two">
+          <ul class="text-left">
+            <li>Offline-first dashboard</li>
+            <li>One-click synchronize</li>
+            <li>Multi-author enabled</li>
+            <li>Co-authors and editors</li>
+            <li>Tag posts</li>
+            <li>Categorize posts</li>
+            <li>Publish in the future</li>
+            <li>Save drafts</li>
+            <li>Feature "starred" posts</li>
+            <li>Recover from trash</li>
+            <li>Clean default theme</li>
+            <li>Extend/customize themes</li>
+            <li>Admin role</li>
+            <li>Cloud and Containerized</li>
+            <li>Free!</li>
+          </ul>
         </div>
-        <div class="twelve columns">
-            <p>An offline-first blogging application</p>
-
-            <!-- Call to action -->
-            <p>
-              <a target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-large"></span></a>&nbsp;&nbsp;
-              <a target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-large"></span></a>&nbsp;&nbsp;
-              <a target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-large"></span></a>
-            </p>
+        <div class="six columns">
+          <ul class="text-left">
+            <li>Responsive interface</li>
+            <li>PBKDF2 encrypted passwords</li>
+            <li>Backup with CouchDB</li>
+            <li>HTTP/2 enabled</li>
+            <li>HTTPS default</li>
+            <li>Easy installation</li>
+            <li>Author bios</li>
+            <li>Search posts</li>
+            <li>Thumbnails for posts</li>
+            <li>Banner pictures</li>
+            <li>Author profile pictures</li>
+            <li>List all authors</li>
+            <li>List all categories</li>
+            <li>List all tags</li>
+            <li>Open source!</li>
+          </ul>
         </div>
-    </div>
-</header>
+      </div>
 
-<!-- Main Content -->
-<article class="container">
+      <p>See something missing? Let us know and we can consider adding it!</p>
+			<a href="/download" class="button button-white button-white-outline">Download</a>
+		</div>
+	</div>
 
-  <div id="about" class="row section">
-    <h2>Coming Soon</h2>
-    <p>Sorry, but this website is still under construction. Please come back later!</p>
+	<footer class="row section text-center background-solid-theme">
+		<p>Oddox is an open source project licensed under Apache 2.0 and MIT.</p>
+		<p>
+			<a target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-darkgrey text-large"></span></a>&nbsp;&nbsp;
+			<a target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-darkgrey text-large"></span></a>&nbsp;&nbsp;
+			<a target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-darkgrey text-large"></span></a>
+			<br/><br/>
+			<span class="text-darkgrey"><em>© <a href="https://oddox.org" class="text-darkgrey">Oddox</a> - 2017</em></span>
+    </p>
+		<a class="button button-small margin-right right" target="_blank" href="https://github.com/oddoxorg/oddox.org">Edit this page</a>
+	</footer>
 
-    <div class="twelve columns padding-large"></div>
-  </div>
-
-</article>
-
-
-<!-- Footer at bottom -->
-<footer class="row section text-center">
-  <p><small><em>© <a href="https://oddox.org">Oddox</a> - 2017</em></small></p>
-  <a class="button button-blue" title="Back to top" href="javascript:gotoTop()">Back to Top</a>
-</footer>
-
-<!-- Lazy load JavaScript, mainly for navigation -->
-<script type="text/javascript" src="https://austindelamar.com/osseous/1.2.0/osseous.min.js"></script>
-
+	<script type="text/javascript" src="https://austindelamar.com/osseous/1.2.0/osseous.min.js"></script>
 </body>
+
 </html>
