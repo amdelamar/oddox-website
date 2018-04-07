@@ -45,9 +45,9 @@
 	<meta name="theme-color" content="#67d9b8">
 
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="vendor/osseous/1.2.0/osseous.min.css" />
+	<link rel="stylesheet" href="vendor/osseous/2.0.1/osseous.min.css" />
 	<link rel="stylesheet" href="vendor/icomoon/icomoon.min.css">
-	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/style.css?v=1.1">
 	<title>Download Oddox</title>
 </head>
 
@@ -60,6 +60,7 @@
       </a>
 		</div>
 		<div class="nav-list text-center" onclick="closeSidebar()">
+      <a class="nav-item" href="/download">Download</a>
 			<a class="nav-item" href="/#samples">Samples</a>
 			<a class="nav-item" href="https://github.com/oddoxorg/">GitHub</a>
 		</div>
@@ -77,9 +78,9 @@
 
 		<div class="navbar-body container">
 			<div class="nav-item-logo">
-				<a href="/">
+				<a href="/" class="text-nounderline">
             <img src="assets/icon-transparent-512.png" alt="Logo" class="margin-left margin-right" alt="Oddox" />
-            <span class="text-medium text-wide text-white">Oddox</span>
+            <span class="text-medium text-wide text-white">oddox</span>
           </a>
 			</div>
 			<div class="nav-small-menu">
@@ -109,9 +110,9 @@
 
       <p>Oddox has three important parts.</p>
       <ol>
-        <li>Oddox server</li>
-        <li>Oddox Offline-first dashboard</li>
-        <li>CouchDB-compatible database (Like Cloudant, PouchDB, or Couchbase)</li>
+        <li>Oddox Server</li>
+        <li>Oddox <i>Offline-first</i> Dashboard</li>
+        <li>CouchDB-compatible Database (Like CouchDB, PouchDB, Couchbase, or Cloudant)</li>
       </ol>
       <p>Choose from the software below to setup or update your blog.</p>
 
@@ -138,14 +139,19 @@
 
       <hr class="margin-top"/>
 
-      <h3>Offline-first Dashboard</h3>
+      <h3>Oddox Dashboard</h3>
 			<div class="row">
 				<div class="four columns text-center">
 					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
-					<h4>For Web Browsers</h4>
+					<h4>Web Browsers</h4>
 					<p>Latest | Beta</p>
 				</div>
-        <div class="eight columns">&nbsp;</div>
+        <div class="four columns text-center">
+					<div style="height:15rem;max-height:15rem;" class="background-solid-lightgrey round full-width"></div>
+					<h4>No-Install</h4>
+					<p><a target="_blank" href="https://dashboard.oddox.org">Open Live Dashboard</a></p>
+				</div>
+        <div class="four columns">&nbsp;</div>
 			</div>
 
       <hr class="margin-top"/>
@@ -164,7 +170,7 @@
 
       <p class="text-center">
         See something missing? Let us know and we can consider adding it!<br/><br/>
-			  <a href="/contact" class="button button-blue button-blue-outline">Contact Us</a>
+			  <a href="/about" class="button button-primary">Contact Us</a>
       </p>
 		</div>
 	</div>
@@ -184,21 +190,20 @@
     <span class="text-bold">
       <a href="/" class="text-black border-none">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="/download" class="text-black border-none">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="/contact" class="text-black border-none">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="/about" class="text-black border-none">About</a>
     </span>
 		<p>Oddox is an open source project licensed under Apache 2.0 and MIT.</p>
 		<p>
-			<a target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-black text-large"></span></a>&nbsp;&nbsp;
-			<a target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-black text-large"></span></a>&nbsp;&nbsp;
-			<a target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-black text-large"></span></a>
+			<a class="text-nounderline" target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-black text-large"></span></a>&nbsp;&nbsp;
+			<a class="text-nounderline" target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-black text-large"></span></a>&nbsp;&nbsp;
+			<a class="text-nounderline" target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-black text-large"></span></a>
 			<br/><br/>
 			<span class="text-black"><em>© <a href="https://oddox.org" class="text-black">Oddox</a> - 2017</em></span>
     </p>
 		<a class="button button-small margin-right right" target="_blank" href="https://github.com/oddoxorg/oddox.org">Edit this page</a>
 	</footer>
 
-	<script type="text/javascript" src="vendor/osseous/1.2.0/osseous.min.js"></script>
+	<script type="text/javascript" src="vendor/osseous/2.0.1/osseous.min.js"></script>
 </body>
 
 </html>

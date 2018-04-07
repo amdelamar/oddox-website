@@ -45,9 +45,9 @@
 	<meta name="theme-color" content="#67d9b8">
 
 	<link rel="shortcut icon" href="favicon.ico" />
-	<link rel="stylesheet" href="vendor/osseous/1.2.0/osseous.min.css" />
+	<link rel="stylesheet" href="vendor/osseous/2.0.1/osseous.min.css" />
 	<link rel="stylesheet" href="vendor/icomoon/icomoon.min.css">
-	<link rel="stylesheet" href="css/style.css?v=1">
+	<link rel="stylesheet" href="css/style.css?v=1.1">
 	<title>About Oddox</title>
 </head>
 
@@ -60,6 +60,7 @@
       </a>
 		</div>
 		<div class="nav-list text-center" onclick="closeSidebar()">
+      <a class="nav-item" href="/download">Download</a>
 			<a class="nav-item" href="/#samples">Samples</a>
 			<a class="nav-item" href="https://github.com/oddoxorg/">GitHub</a>
 		</div>
@@ -73,13 +74,13 @@
 		</div>
 	</nav>
 
-	<nav class="navbar background-solid-theme" style="background: linear-gradient(180deg,#67d9b8 0%,#4da088 100%);">
+  <nav class="navbar background-solid-theme">
 
 		<div class="navbar-body container">
 			<div class="nav-item-logo">
-				<a href="/">
+				<a href="/" class="text-nounderline">
             <img src="assets/icon-transparent-512.png" alt="Logo" class="margin-left margin-right" alt="Oddox" />
-            <span class="text-medium text-wide text-white">Oddox</span>
+            <span class="text-medium text-wide text-white">oddox</span>
           </a>
 			</div>
 			<div class="nav-small-menu">
@@ -88,11 +89,20 @@
         </a>
 			</div>
 			<div class="nav-group nav-large-menu text-bold">
+        <a class="nav-item text-white" href="/download">Download</a>
 				<a class="nav-item text-white" href="/#samples">Samples</a>
 				<a class="nav-item text-white" href="https://github.com/oddoxorg/">GitHub</a>
 			</div>
 		</div>
 	</nav>
+
+	<header class="row padding-top background-solid-theme text-white" style="background: linear-gradient(180deg,#67d9b8 0%,#4da088 100%);">
+		<div class="container text-center">
+			<div class="twelve columns padding-top-large padding-bottom-large">
+				<img src="assets/logo-transparent.png" style="max-width:40rem;" class="padding--top-large padding-left-large padding-right-large full-width" />
+			</div>
+		</div>
+	</header>
 
 
 	<div id="ads" class="row section">
@@ -104,8 +114,12 @@
       <hr class="margin-top"/>
 
       <p class="text-center">
+        Have a problem? Open an issue on GitHub so we can fix it.<br/><br/>
+        <a href="https://github.com/oddoxorg/" class="button button-danger">Open Issue</a>
+      </p>
+      <p class="text-center">
         Like Oddox? Help us spread the word!<br/><br/>
-			  <a href="https://twitter.com/oddoxorg/" class="button button-blue">Tweet it!</a>
+			  <a href="https://twitter.com/oddoxorg/" class="button button-primary">Tweet it!</a>
       </p>
 		</div>
 	</div>
@@ -125,21 +139,20 @@
     <span class="text-bold">
       <a href="/" class="text-black border-none">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="/download" class="text-black border-none">Download</a>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="/contact" class="text-black border-none">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="/about" class="text-black border-none">About</a>
     </span>
 		<p>Oddox is an open source project licensed under Apache 2.0 and MIT.</p>
 		<p>
-			<a target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-black text-large"></span></a>&nbsp;&nbsp;
-			<a target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-black text-large"></span></a>&nbsp;&nbsp;
-			<a target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-black text-large"></span></a>
+			<a class="text-nounderline" target="_blank" title="Twitter" href="https://twitter.com/oddoxorg"><span class="icon-twitter text-black text-large"></span></a>&nbsp;&nbsp;
+			<a class="text-nounderline" target="_blank" title="GitHub" href="https://github.com/oddoxorg/"><span class="icon-github text-black text-large"></span></a>&nbsp;&nbsp;
+			<a class="text-nounderline" target="_blank" title="Docker" href="https://hub.docker.com/u/oddoxorg/"><span class="icon-docker text-black text-large"></span></a>
 			<br/><br/>
 			<span class="text-black"><em>© <a href="https://oddox.org" class="text-black">Oddox</a> - 2017</em></span>
     </p>
 		<a class="button button-small margin-right right" target="_blank" href="https://github.com/oddoxorg/oddox.org">Edit this page</a>
 	</footer>
 
-	<script type="text/javascript" src="vendor/osseous/1.2.0/osseous.min.js"></script>
+	<script type="text/javascript" src="vendor/osseous/2.0.1/osseous.min.js"></script>
 </body>
 
 </html>
